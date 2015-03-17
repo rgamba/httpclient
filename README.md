@@ -10,6 +10,14 @@ $http = new HttpClient("http://mydomain.com");
 $http->get("/info.php");
 echo $http->getBody(); // Just print the response body
 ```
+Can also be written like this:
+```php
+<?php
+require_once('httpclient.php');
+$http = new HttpClient("http://mydomain.com/info.php");
+$http->get();
+echo $http->getBody(); // Just print the response body
+```
 ### Headers and response status codes
 ```php
 <?php
